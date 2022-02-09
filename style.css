@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main{
+    position: relative;
+    background: linear-gradient(120deg,#fff,#fff 62%, #e61f2c 62%, #e61f2c 100%);
+    min-height: 100vh; /*REVISAR*/
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+}
+
+header{
+    position: absolute; /*REVISAR*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header .logo img{
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+header ul{
+    display: flex;
+}
+
+header ul li{
+    list-style: none;
+    margin: 0 10px;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+header ul li a:hover,
+header ul li a.active{
+    color: #ed5753
+}
+
+header .app{
+    position: absolute;  /*REVISAR*/
+    right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: #e61f2c;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.5s;
+}
+
+header .app:hover{
+    transform: scale(1.2);
+    background: #ed5753;
+    color: #fff;
+}
+
+header .app ion-icon{
+    margin-right: 10px;
+    font-size: 1.4em;
+}
+
+.main .content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .content .text{
+    max-width: 700px;
+}
+
+.main .content .text h2{
+    font-size: 6em;
+    color: #e61f2c;
+}
+
+.main .content .text p{
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.8em;
+}
+
+.main .content .text h4{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+.main .content .text .btn{
+    background: #e61f2c;
+    color: #fff;
+    display: inline-flex;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1.1em;
+    margin: 5px 20px 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    transition: transform 0.5s;
+}
+
+.main .content .text .btn:hover{
+    background: #fff;
+    color: #e61f2c;;
+    transform: scale(1.2);
+    
+}
+
+.main .content .text .btn ion-icon{
+    margin-right: 10px ;
+    font-size: 1.4em;
+}
+
+.main .content .img img{
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-right: 120px;
+    max-width: 300px;
+    display: none ;
+    transition: transform 1s;
+}
+
+.main .content .img img:hover{
+    transform: scale(1.16);
+}
+
+.main .content .img .active{
+    display: block;
+}
+
+.main .content .dots{
+    position: absolute;
+    top: 45%;
+    transform: translate(-50%);
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main .content .dots .dot{
+    position:relative;
+    width: 10px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.25);
+    display: inline-flex;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.main .content .dots .active{
+    background: #fff;
+}
+
+.main .sci{
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+}
+
+.main .sci li{
+    list-style: none;
+    margin-right: 20px;
+    transition: transform 0.5s;
+}
+
+.main .sci li:hover{
+    transform: scale(1.2);
+}
+
+.main .sci li a{
+    font-size: 1.8em;
+    color:#e61f2c;
+}
+
+.main .sci li a:hover{
+    color: #ed5753 ;
+}
+
+@media(max-width:991px){
+    header{
+        padding: 30px;
+        justify-content: space-between;
+    }
+
+    .main{
+        padding: 30px;
+        background: #fff;
+    }
+
+    header .app{
+        display: none;
+    }
+
+    .main .content{
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+
+    .main .content .img img{
+        margin: 0;
+        margin-top: 30px;
+    }
+
+    .main .content .dots{
+        position: relative;
+        top: initial;
+        transform: none;
+        right: initial;
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+
+    .main .content .dots .dot{
+        width: 25px;
+        height: 10px;
+        background: #e61f2c;
+        opacity: 0.2;
+    }
+
+    .main .content .dots .active{
+        opacity: 1;
+        background: #e61f2c;
+    }
+
+    .main .content .img img:hover{
+        transform: none;
+    }
+
+    .main .content .text{
+        text-align: center;
+    }
+
+    .main .content .text h2{
+        font-size: 3rem;
+    }
+
+    .main .sci{
+        position: absolute;
+        bottom: 30px;
+        display: flex;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
